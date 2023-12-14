@@ -81,7 +81,7 @@
     
         display: flex;
         margin-bottom: 30px;
-        margin-top: 110%;
+        margin-top: 100%;
         margin-left: 0%;
         position: absolute;
         text-align: center;
@@ -209,7 +209,7 @@ iframe {
 
     display: flex;
     margin-bottom: 30px;
-    margin-top: 110%;
+    margin-top: 100%;
     margin-left: 0%;
     position: absolute;
     text-align: center;
