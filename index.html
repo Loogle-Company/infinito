@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">       
+    <link rel="stylesheet" href="style.css">
+    <title>Outros</title>
+
+</head>
+<body>
+
+<!-- REDIRECIONAMENTO DO CONTEUDO -->
+
+<header class="outros">
+    <div class="titulo">
+        <h1>REGISTRO DE IMÓVEIS</h1>
+        <h2>Campo Largo</h2>
+    </div>
+
+</header>
+
+
+
+
+<div class="meio">
+    <div class="objeto">
+        <h1>SERVIÇOS</h1>
+        <h2 id="segundo">SELECIONE A OPÇÃO</h2>
+        <!-- Botão de Início com redirecionamento -->
+        <button id="btnInicio">Início</button>
+
+</div>
+
+<script>
+    // Aguarde até que o DOM seja totalmente carregado
+    document.addEventListener("DOMContentLoaded", function() {
+        var btnInicio = document.getElementById('btnInicio');
+
+        // Adiciona um ouvinte de clique para o botão Início
+        btnInicio.addEventListener('click', function() {
+            // Redireciona para a página desejada usando um caminho relativo
+            window.location.href = 'https://louglecompany.github.io/tutorial/';
+        });
+    });
+</script>
+
+
+    <div class="opcoes">
+
+        <div class="opcao-container">
+            <h3>E-protocolo</h3>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+        </div>
+        
+        <div class="opcao-container">
+            <h3>Certidão Digital</h3>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+        </div>
+    
+        <div class="opcao-container">
+            <h3>Pesquisa qualificada</h3>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+        </div>
+    
+        <div class="opcao-container">
+            <h3>Pesquisa Prévia</h3>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+        </div>
+    
+        <div class="opcao-container">
+            <h3>Acompanhamento Registral</h3>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+        </div>
+
+        <div class="opcao-container">
+            <h3>Assinador Digital</h3>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+        </div>
+
+        <div class="opcao-container">
+            <h3>Compra de Crédito</h3>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+        </div>
+
+        <div class="opcao-container">
+            <h3>intimações/Consolidação</h3>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+        </div>
+
+        <div class="opcao-container">
+            <h3>Matrícula Online </h3>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+        </div>
+
+        <div class="opcao-container">
+            <h3>Repositório Confiavél de Documento Eletrônico</h3>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+        </div>
+
+        <div class="opcao-container">
+            <h3>Usucapião</h3>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+        </div>
+        
+    </div>
+    
+    <div class="botoes">
+        <button onclick="redirecionarParaEprotocolo()">APPLY</button>
+        <button onclick="redirecionarParaCertidaoDigital()">APPLY</button>
+        <button onclick="redirecionarParaPesquisaQualificada()">APPLY</button>
+        <button onclick="redirecionarParaPesquisaPrévia()">APPLY</button>
+        <button onclick="redirecionarParaAcompanhamentoRegistral()">APPLY</button>   
+        <button onclick="redirecionarParaAssinadorDigital()">APPLY</button>
+        <button onclick="redirecionarParaCompradeCrédito()">APPLY</button>
+        <button onclick="redirecionarParaintimaçõesConsolidação()">APPLY</button>
+        <button onclick="redirecionarParaMatriculaonline()">APPLY</button> 
+        <button onclick="redirecionarParaRepositórioConfiavél()">APPLY</button>
+        <button onclick="redirecionarParaUsucapiao()">APPLY</button>
+
+    </div>
+
+
+
+
+<script src="outros.js"></script>
+
+</body>
+
+</html>
