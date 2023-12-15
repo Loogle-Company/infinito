@@ -202,15 +202,20 @@
     
 }
 
-iframe {
-    
-    border-radius: 5px;
-    width: 115%;
-    height: 160px;
-    align-items: center;
-    margin-bottom: 20px;
-    
-}
+    iframe {
+        
+        border-radius: 5px;
+        width: 80%;
+        height: 150px;
+        align-items: center;
+        margin-bottom: 20px;
+        
+    }
+
+    .icon{
+
+        left:0;
+    }
 
 .carros{
 
