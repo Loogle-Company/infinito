@@ -3,6 +3,7 @@
 
 
     /** Card **/
+    
     .card {
         display: flex;
         flex-direction: column;
@@ -24,6 +25,7 @@
     
     /** Card **/
     .card2 {
+        
         display: none;
         flex-direction: column;
         margin: 40px;
@@ -75,6 +77,11 @@
         align-items: center;
         margin-bottom: 20px;
         
+    }
+
+    .icon{
+
+        left:0;
     }
     
     .carros{
