@@ -72,11 +72,16 @@
     iframe {
         
         border-radius: 5px;
-        width: 90%;
+        width: 80%;
         height: 150px;
         align-items: center;
         margin-bottom: 20px;
         
+    }
+
+    .icon{
+
+        left:0;
     }
     
     .carros{
