@@ -53,12 +53,12 @@ document.getElementById('menuButton').addEventListener('click', function() {
   
   function redirecionarParaCertidaoDigital() {
     // Redirecionar para a página correspondente à Certidão Digital
-    window.location.href = './flip-five/index.html';
+    window.location.href = './flip-two/index.html';
   }
   
   function redirecionarParaPesquisaQualificada() {
     // Redirecionar para a página correspondente à Pesquisa Qualificada
-    window.location.href = './flip-two/index.html';
+    window.location.href = './flip-tree/index.html';
   }
   
   function redirecionarParaPesquisaPrévia() {
@@ -68,7 +68,7 @@ document.getElementById('menuButton').addEventListener('click', function() {
   
   function redirecionarParaAcompanhamentoRegistral() {
     // Redirecionar para a página correspondente à Certidão Digital
-    window.location.href = './flip-eleven/index.html';
+    window.location.href = './flip-five/index.html';
   }
   
   function redirecionarParaAssinadorDigital() {
@@ -99,12 +99,12 @@ document.getElementById('menuButton').addEventListener('click', function() {
   
   function redirecionarParaUsucapiao() {
     // Redirecionar para a página correspondente à Pesquisa Qualificada
-    window.location.href = './flip-tree/index.html';
+    window.location.href = './flip-eleven/index.html';
   }
 
   function redirecionarParaLinksimportantes() {
     // Redirecionar para a página correspondente à Pesquisa Qualificada
-    window.location.href = './flip-tree/.html';
+    window.location.href = '#';
   }
   
   
