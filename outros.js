@@ -63,43 +63,43 @@ document.getElementById('menuButton').addEventListener('click', function() {
   
   function redirecionarParaPesquisaPrévia() {
     // Redirecionar para a página correspondente à Usucapião
-    window.location.href = '#';
+    window.location.href = './flip-for/index.html';
   }
   
   function redirecionarParaAcompanhamentoRegistral() {
     // Redirecionar para a página correspondente à Certidão Digital
-    window.location.href = '#';
+    window.location.href = './flip-five/index.html';
   }
   
   function redirecionarParaAssinadorDigital() {
     // Redirecionar para a página correspondente à Pesquisa Qualificada
-    window.location.href = '#';
+    window.location.href = './flip-six/index.html';
   }
   
   function redirecionarParaCompradeCrédito() {
     // Redirecionar para a página correspondente à Central Eletrônica
-    window.location.href = '#';
+    window.location.href = './flip-seven/index.html';
   }
   
   
   function redirecionarParaintimaçõesConsolidação() {
     // Redirecionar para a página correspondente à Usucapião
-    window.location.href = '#';
+    window.location.href = './flip-eight/index.html';
   }
   
   function redirecionarParaMatriculaonline() {
     // Redirecionar para a página correspondente à Central Eletrônica
-    window.location.href = '#';
+    window.location.href = './flip-nine/index.html';
   }
   
   function redirecionarParaRepositórioConfiavél() {
     // Redirecionar para a página correspondente à Pesquisa Qualificada
-    window.location.href ='#';
+    window.location.href = './flip-ten/index.html';
   }
   
   function redirecionarParaUsucapiao() {
     // Redirecionar para a página correspondente à Pesquisa Qualificada
-    window.location.href ='#';
+    window.location.href = './flip-two/index.html';
   }
   
   document.addEventListener("DOMContentLoaded", function() {
