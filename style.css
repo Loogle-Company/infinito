@@ -174,7 +174,7 @@ button:hover {
   cursor: pointer;
   border-radius: 8px;
   padding: 10px 30px;
-  margin-bottom: 55px; /* Espaço entre os botões */
+  margin-bottom: 58px; /* Espaço entre os botões */
   display: block; /* Faz com que os botões ocupem toda a largura disponível */
   transition: transform 0.2s ease-in-out;
 
