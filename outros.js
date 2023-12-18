@@ -53,53 +53,53 @@ document.getElementById('menuButton').addEventListener('click', function() {
   
   function redirecionarParaCertidaoDigital() {
     // Redirecionar para a página correspondente à Certidão Digital
-    window.location.href = './flip-two/index.html';
+    window.location.href = 'https://registradores.onr.org.br/Downloads/manuais2021/SAEC_CertidaoDigital.pdf';
   }
   
   function redirecionarParaPesquisaQualificada() {
     // Redirecionar para a página correspondente à Pesquisa Qualificada
-    window.location.href = './flip-tree/index.html';
+    window.location.href = 'https://registradores.onr.org.br/Downloads/manuais2021/SAEC_PesquisaQualificada.pdf';
   }
   
   function redirecionarParaPesquisaPrévia() {
     // Redirecionar para a página correspondente à Usucapião
-    window.location.href = './flip-for/index.html';
+    window.location.href = 'https://registradores.onr.org.br/Downloads/manuais2021/SAEC_PesquisaPrevia.pdf';
   }
   
   function redirecionarParaAcompanhamentoRegistral() {
     // Redirecionar para a página correspondente à Certidão Digital
-    window.location.href = './flip-five/index.html';
+    window.location.href = 'https://registradores.onr.org.br/Downloads/manuais2021/SAEC_AcompanhamentoRegistral.pdf';
   }
   
   function redirecionarParaAssinadorDigital() {
     // Redirecionar para a página correspondente à Pesquisa Qualificada
-    window.location.href = './flip-six/index.html';
+    window.location.href = 'https://onrassinador.blob.core.windows.net/public/Manual_Signer_ONR.pdf';
   }
   
   function redirecionarParaCompradeCrédito() {
     // Redirecionar para a página correspondente à Central Eletrônica
-    window.location.href = './flip-seven/index.html';
+    window.location.href = 'https://registradores.onr.org.br/Downloads/manuais2021/SAEC_CompraCredito.pdf';
   }
   
   
   function redirecionarParaintimaçõesConsolidação() {
     // Redirecionar para a página correspondente à Usucapião
-    window.location.href = './flip-eighth/index.html';
+    window.location.href = 'https://registradores.onr.org.br/Downloads/SEICRegistradores.pdf';
   }
   
   function redirecionarParaMatriculaonline() {
     // Redirecionar para a página correspondente à Central Eletrônica
-    window.location.href = './flip-nine/index.html';
+    window.location.href = 'https://registradores.onr.org.br/Downloads/manuais2021/SAEC_MatriculaOnline.pdf';
   }
   
   function redirecionarParaRepositórioConfiavél() {
     // Redirecionar para a página correspondente à Pesquisa Qualificada
-    window.location.href = './flip-ten/index.html';
+    window.location.href = 'https://registradores.onr.org.br/Downloads/manuais2021/SAEC_RCDE.pdf';
   }
   
   function redirecionarParaUsucapiao() {
     // Redirecionar para a página correspondente à Pesquisa Qualificada
-    window.location.href = './flip-eleven/index.html';
+    window.location.href = 'https://registradores.onr.org.br/Downloads/manuais2021/SAEC_Usucapiao.pdf';
   }
 
   function redirecionarParaLinksimportantes() {
