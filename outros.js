@@ -58,7 +58,7 @@ document.getElementById('menuButton').addEventListener('click', function() {
   
   function redirecionarParaPesquisaQualificada() {
     // Redirecionar para a página correspondente à Pesquisa Qualificada
-    window.location.href = '#';
+    window.location.href = './flip-two/index.html';
   }
   
   function redirecionarParaPesquisaPrévia() {
