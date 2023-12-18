@@ -84,7 +84,7 @@ document.getElementById('menuButton').addEventListener('click', function() {
   
   function redirecionarParaintimaçõesConsolidação() {
     // Redirecionar para a página correspondente à Usucapião
-    window.location.href = './flip-eight/index.html';
+    window.location.href = './flip-eighth/index.html';
   }
   
   function redirecionarParaMatriculaonline() {
@@ -99,7 +99,7 @@ document.getElementById('menuButton').addEventListener('click', function() {
   
   function redirecionarParaUsucapiao() {
     // Redirecionar para a página correspondente à Pesquisa Qualificada
-    window.location.href = './flip-two/index.html';
+    window.location.href = './flip-tree/index.html';
   }
   
   document.addEventListener("DOMContentLoaded", function() {
