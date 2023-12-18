@@ -101,6 +101,12 @@ document.getElementById('menuButton').addEventListener('click', function() {
     // Redirecionar para a página correspondente à Pesquisa Qualificada
     window.location.href = './flip-tree/index.html';
   }
+
+  function redirecionarParaLinksimportantes() {
+    // Redirecionar para a página correspondente à Pesquisa Qualificada
+    window.location.href = './flip-tree/.html';
+  }
+  
   
   document.addEventListener("DOMContentLoaded", function() {
       var btnInicio = document.getElementById('btnInicio');
