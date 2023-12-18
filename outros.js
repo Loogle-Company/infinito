@@ -48,7 +48,7 @@ document.getElementById('menuButton').addEventListener('click', function() {
   // CERTIDAO DIGITAL
   function redirecionarParaEprotocolo() {
     // Redirecionar para a página correspondente à Pesquisa Qualificada
-    window.location.href ='./flip-one/index.html';
+    window.location.href ='https://registradores.onr.org.br/Downloads/manuais2021/SAEC_eProtocolo.pdf';
   }
   
   function redirecionarParaCertidaoDigital() {
