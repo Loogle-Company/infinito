@@ -125,7 +125,7 @@ button:hover {
     font-size: 25px;
     font-family: "Yu Gothic UI Light"; /* Use a fonte personalizada */
     color: #3d3d3d; /* Cor do texto */
-    margin-bottom: 10px; /* Remove a margem inferior para alinhar a primeira letra */
+    margin-bottom: 20px; /* Remove a margem inferior para alinhar a primeira letra */
     line-height: 1.4; /* Define a altura da linha para alinhar a primeira letra */
 }
 
@@ -152,7 +152,7 @@ button:hover {
 
 
 .opcao-container {
-    margin-bottom: 20px; /* Adiciona espaço entre as opções */
+    margin-bottom: 30px; /* Adiciona espaço entre as opções */
 }
 
 .botoes {
