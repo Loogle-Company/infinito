@@ -159,8 +159,8 @@ button:hover {
 
   text-align: right; /* Alinha os botões à direita */
   position: absolute; /* Posiciona os botões de forma absoluta */
-  top: 380px; /* Coloca os botões no topo da página */
-  right: 600px; /* Coloca os botões à direita da página */
+  top: 500px; /* Coloca os botões no topo da página */
+  right: 100px; /* Coloca os botões à direita da página */
 
 }
 
