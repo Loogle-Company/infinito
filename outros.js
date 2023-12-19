@@ -104,7 +104,7 @@ document.getElementById('menuButton').addEventListener('click', function() {
 
   function redirecionarParaLinksimportantes() {
     // Redirecionar para a página correspondente à Pesquisa Qualificada
-    window.location.href = '#';
+    window.location.href = './flip-eleven/index.html';
   }
   
   
