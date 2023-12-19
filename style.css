@@ -24,7 +24,7 @@ html, body {
   
   
   
-  .bntInicio {
+  .bntInicio button {
     background-color: #333;
     color: white;
     padding: 10px 38px;
@@ -161,7 +161,7 @@ button:hover {
   text-align: right; /* Alinha os botões à direita */
   position: absolute; /* Posiciona os botões de forma absoluta */
   top: 500px; /* Coloca os botões no topo da página */
-  right: 100px; /* Coloca os botões à direita da página */
+  right: 500px; /* Coloca os botões à direita da página */
 
 }
 
