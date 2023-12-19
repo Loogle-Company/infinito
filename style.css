@@ -24,16 +24,16 @@ html, body {
   
   
   
-  .bntInicio, button {
+  .bntInicio {
     background-color: #333;
     color: white;
     padding: 10px 38px;
     font-size: 16px;
     border: none;
     cursor: pointer;
-    top: 10px;
+    top: 20px;
     text-align: center;
-    margin-left: 63%;
+    margin-left: 66%;
     display: block;
     position:absolute;
 }
