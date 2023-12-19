@@ -34,7 +34,7 @@ html, body {
     margin-top: 20px;
     text-align: center;
     margin-left: 46%;
-    display: none;
+    display: block;
 }
 
 button:hover {
@@ -341,7 +341,11 @@ p {
   
 
 
+    #btnInicio {
 
+        display:block;
+
+    }
   
   /* BOTÃO DO MENU */
   
