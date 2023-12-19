@@ -33,7 +33,7 @@ html, body {
     cursor: pointer;
     margin-top: 10px;
     text-align: center;
-    margin-left: 90%;
+    margin-left: 70%;
     display: block;
     position:absolute;
 }
@@ -341,12 +341,6 @@ p {
   }
   
 
-
-    #btnInicio {
-
-        display:block;
-
-    }
   
   /* BOTÃO DO MENU */
   
