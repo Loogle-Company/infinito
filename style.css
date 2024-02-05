@@ -1,746 +1,894 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200;1,300;1,400&display=swap');
+/* BODY */
 
-/** General **/
 * {
-    font-family: 'Poppins', sans-serif;
-    margin: 0;
     padding: 0;
     box-sizing: border-box;
+    margin: 0;
+    transition: all 2s ease;
 }
 
-html, body {
-    height:auto;
-    overflow-x:hidden;
-  background-color: rgb(248, 248, 248);
+/* TELA DE CARREGAMENTO */
+
+#a {
+    background-color: rgb(53, 53, 53);
+    height: 50vh;
+    top: 0;
+    position: relative;
 }
 
-.titulo {
-    font-size: 10px;
-    margin-left: 15px; /* Remove a margem esquerda */
-    margin-right: 0; /* Remove a margem direita */
-    margin-top: 10px;
-    text-align: left; /* Alinha o texto à esquerda */
-  }
-  
-  
-  
-  #btnInicio {
-    background-color: #333;
-    color: white;
-    padding: 10px 38px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-    top: 20px;
-    text-align: center;
-    margin-left: 66%;
-    display: block;
-    position:absolute;
+#b {
+    background-color: rgb(53, 53, 53);
+    height: 50vh;
+    position: relative;
+    bottom: 0;
 }
 
-button:hover {
-    background-color: #c54b4b;
+/* Efeito de transição */
+#a.a {
+    top: -50vh;
 }
-  
-  @font-face {
-  
-    font-family: "cebo"; /* Nome da fonte que você usará */
-    src: url("./escolha/fonts/Lato-Regular.ttf"); /* Substitua pelo caminho real do arquivo de fonte */
-  
-  }
-  
-  /* Media queries para ajustes em telas menores */
-  @media (max-width: 768px) {
-    .inicio {
-      flex-direction: column; /* Altera para empilhar os elementos verticalmente */
-      text-align: center; /* Centraliza o texto */
-    }
-  
-    .buttonstart {
-      margin-top: 20px; /* Aumenta a margem no topo do botão em telas menores */
-    }
-  
-    .title {
-      margin: 25px 0; /* Aumenta a margem superior e inferior do título em telas menores */
-    }
-  }
-  
-  /* Estilos para o texto */
-  .centered-text {
-    font-family: 'Gill Sans MT';
-    font-size: 40px; /* Ajuste o tamanho da fonte conforme necessário */
-    text-align: center; /* Centraliza o texto */
-    margin-top: 100px; /* Ajusta a margem superior */
-    /* Outros estilos que você queira aplicar */
-  }
 
-/* Defina a fonte personalizada usando @font-face */
-@font-face {
-    font-family: "Lato-Regular"; /* Nome da fonte */
-    src: url("./escolha/fonts/Lato-Regular.ttf") format("opentype"); /* Caminho para o arquivo de fonte e formato */
+#b.b {
+    bottom: -50vh;
 }
-.outros {
-    background-color: #ffffff;
-    color: #333;
-    padding: 28px;
+
+.nokia{
+    display: none;
+}
+
+.texto p {
+color: rgb(242, 0, 0);
+font-size: 0px;
+z-index: 999;
+display: none; /* Começa escondido */
+animation: fadeIn 2s ease;
+
+}
+
+.aviso{
+display:none;
+}
+
+@keyframes fadeIn {
+from {
+opacity: 0;
+height: 0;
+}
+to {
+opacity: 1;
+height: auto;
+}
+}
+
+
+html, body{
+    width: 100%;
+    height: 100vh;
+    background-color: #f8f8f8;
+}
+
+
+
+/* Nova classe para esconder a div B após a transição */
+.b-hidden {
+    display: none;
+}
+
+.loader {
+    position: absolute;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    /* margin-top: -20px; Remova essa linha para manter o cabeçalho no topo */
-    margin-left: -20px;
-    margin-right: -20px;
-    padding-top: 10px;
-    overflow: hidden; /* Adicione o overflow hidden apenas aqui */
+    top: 50%;
+    left: 45%;
+    
 }
 
-  
-  /* Estilos para o botão que se parece com as linhas */
-  .buttonstart {
-    border: none; /* Remove a borda padrão do botão */
-    background: none; /* Remove o fundo padrão do botão */
-    cursor: pointer; /* Muda o cursor para indicar que é clicável */
-    margin-right: 110px; /* Adiciona margem à direita do botão */
-    margin-top: 30px; /* Aumenta a margem superior */
-  }
-  
-  
-  .buttonstart .line {
-  
-    width: 30px; /* Ajusta o tamanho das linhas */
-    height: 1px; /* Altura das linhas */
-    background-color: #333;
-    margin: 5px 0; /* Espaçamento entre as linhas */
-    text-align: right; /* Alinha o texto à esquerda */
-  
-  }
-  
-  .buttonstart:focus {
-  
-    outline: none; /* Remove a borda de foco ao clicar no botão */
-  
-  }
-
-
-/* Estilização para h3 dentro de .opcao-container */
-.opcao-container h3 {
-    font-size: 25px;
-    font-family: "Yu Gothic UI Light"; /* Use a fonte personalizada */
-    color: #3d3d3d; /* Cor do texto */
-    margin-bottom: 20px; /* Remove a margem inferior para alinhar a primeira letra */
-    line-height: 1.4; /* Define a altura da linha para alinhar a primeira letra */
+.loader div {
+    background: rgb(255, 255, 255);
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    z-index: 1;
+    animation: anim 2s infinite linear;
+    animation-delay: calc(-0.3s * var(--i));
+    transform: translateY(5px);
+    margin: 0.2em;
 }
 
-/* Estilização para p dentro de .opcao-container */
-.opcao-container p {
-    font-family: "HP Simplified"; /* Use a fonte personalizada */
-    color: #757575; /* Cor do texto */
-    margin-top: 5px; /* Adiciona um pequeno espaço entre h3 e p */
-    flex-grow: 1; /* Permite que o parágrafo ocupe todo o espaço disponível */
+h4{
+    display: none;
 }
 
-.meio {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin: 0 auto;
-    max-width: 800px; /* Define a largura máxima do conteúdo */
-    padding: 100px;
-    flex-direction: column; /* Alinha os elementos verticalmente */
-    margin-left:20%;
+@keyframes anim {
+    0%, 100% {
+        transform: translateY(5px);
+    }
+    50% {
+        transform: translateY(-40px);
+    }
 }
 
-
-
-
-.opcao-container {
-    margin-bottom: 30px; /* Adiciona espaço entre as opções */
+@keyframes anim2 {
+    0%, 100% {
+        transform: rotate(-10deg);
+    }
+    50% {
+        transform: rotate(10deg);
+    }
 }
 
-.botoes {
-
-  text-align: right; /* Alinha os botões à direita */
-  position: absolute; /* Posiciona os botões de forma absoluta */
-  top: 410px; /* Coloca os botões no topo da página */
-  right: 500px; /* Coloca os botões à direita da página */
-
-}
-
-/* Estilização para os botões dentro da classe "botoes" */
-.botoes button {
-
-  font-family: "Lato-Regular"; /* Use a fonte personalizada */
-  background-color: #d8c200;
-  color: #333; /* Cor do texto branca */
-  border: none;
-  cursor: pointer;
-  border-radius: 8px;
-  padding: 10px 30px;
-  margin-bottom: 63px; /* Espaço entre os botões */
-  display: block; /* Faz com que os botões ocupem toda a largura disponível */
-  transition: transform 0.2s ease-in-out;
-
-
-}
-
-/* Estilos para a animação de hover */
-.botoes button:hover {
-  transform: translateY(-5px); /* Move o botão para cima ao passar o mouse */
-  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra */
-}
-
-
-/* Estilos para a animação de hover */
-.botoes button:hover {
-  transform: translateY(-5px); /* Move o botão para cima ao passar o mouse */
-  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra */
-}
-
-
-/* Estilos para a animação de hover */
-.botoes button:hover {
-  transform: translateY(-5px); /* Move o botão para cima ao passar o mouse */
-  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra */
-}
-
-/* Aplicar a fonte "Cascadia Code SemiLight" aos textos dentro da classe "objeto" */
-.objeto {
-    font-family: "Cascadia Code SemiLight";
-    color: #575555;
-}
-
-/* Estilo para o título h1 dentro da classe "objeto" */
-.objeto h1 {
-    font-size: 30px;
-    font-family: "Lato-Regular"; /* Use a fonte personalizada */
-    color: #3d3d3d; /* Cor do texto */
-    margin-bottom: 30px; /* Espaço abaixo do h1 */
-    line-height: 1.4; /* Define a altura da linha para alinhar a primeira letra */
-    margin-top: 20px;
-}
-
-#menuButton{
-
+.logo img {
+  opacity: 0.1;
+  left: 25%;
+  top: 15%;
+  position: absolute;
   display: none;
 }
 
-/* Estilo para o subtítulo h2 dentro da classe "objeto" */
-.objeto h2 {
-    font-size: 24px; /* Tamanho da fonte para h2 */
-    font-family: "Lato-Regular"; /* Use a fonte personalizada */
-    color: #858484; /* Cor do texto */
-    margin-bottom: 10px; /* Espaço abaixo do h2 */
-    line-height: 1.4; /* Define a altura da linha para alinhar a primeira letra */
-    margin-bottom: 50px; /* Remove a margem inferior para alinhar a primeira letra */
+
+
+
+.direita {
+    background-color: rgb(36, 36, 36);
+    width: 16%;
+    height: 100vh;
+    right: 0%;
+    position: absolute;
+    top: 0;
+    opacity: 0; /* Inicia com opacidade 0 para não ser visível */
+    transition: opacity 3s ease; /* Adapte a duração conforme necessário */
 }
 
+.bloco {
 
-/* Estilo para a linha separadora após o subtítulo h2 */
-.objeto h2::after {
-    content: ""; /* Adicionar conteúdo vazio */
-    display: block; /* Tornar a linha um elemento de bloco */
-    width: 100px; /* Largura da linha */
-    height: 2px; /* Altura da linha */
-    background-color: #eeebeb; /* Cor da linha */
-    position: absolute; /* Posição absoluta em relação ao subtítulo h2 */
-    bottom: -30px; /* Posiciona a linha 5 pixels acima da margem inferior do subtítulo h2 */
-    left: 0; /* Alinha a linha à esquerda do subtítulo h2 */
-}
-
-/* Estilo para o texto dentro de h3 */
-h3 {
-    font-size: 23px;
-    font-family: "Yu Gothic UI Light"; /* Use a fonte personalizada */
-    color: #3d3d3d; /* Cor do texto */
-  
-}
-
-p {
-    font-family: "Yu Gothic UI Light"; /* Use a fonte personalizada */
-    color: #757575; /* Cor do texto */
-    margin-bottom:30px; /* Espaço abaixo do h3 */
+    display: flex;
+    flex-direction: column;
 
 }
-
-
-
-
-
-
-
-
-/* VOLTA AO INICIO (MENU) */
-
-
-
-
-
 
 
 
 .menu {
 
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #333; /* Cor de fundo do menu */
-    padding: 20px; /* Espaçamento interno do menu */
-    box-shadow: 0px 0px 10px rgb(255, 255, 255); /* Adicione sombra para o menu */
-    z-index: 1000; /* Para garantir que o menu fique acima de tudo */
-    overflow: hidden; /* Remova a rolagem do conteúdo */
-
-  }
-  
-  .menu ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .menu li {
-    margin-bottom: 10px;
-  }
-  
-  .menu a {
-    text-decoration: none;
-    color: #333; /* Cor do texto do menu */
-    font-weight: bold;
-  }
-  
-  .menu a:hover {
-    text-decoration: underline;
-  }
-  
-  .closertitle {
-    font-size: 20px;
-    margin-left: 92px;
-    font-family: "cebo";
-    margin-top: 40px;
-    color: white; /* Adicione a propriedade color com a cor branca */
-    margin-top: 100px; 
-  }
-  
-  
-  
-  /* Animação para fechar o menu gradualmente */
-  @keyframes closeMenuAnimation {
-    0% {
-      opacity: 1;
-      transform: scale(1);
-    }
-    100% {
-      opacity: 0;
-      transform: scale(0.1);
-    }
-  }
-  
-  
-  .menu.closing {
-    animation: closeMenuAnimation 0.5s forwards;
-  }
-  
-
-  
-  /* BOTÃO DO MENU */
-  
-
-
-
-
-  #buttonclose {
-    border: none;
-    background: none;
-    cursor: pointer;
-    position: absolute;
-    top: 125px; /* Ajuste a posição vertical conforme necessário */
-    right: 200px; /* Ajuste a posição horizontal conforme necessário */
-  }
-  
-  
-  #buttonclose .line {
-    width: 30px;
-    height: 1px;
-    background-color: rgb(255, 255, 255);
-    margin: 5px 0;
-  }
-  
-  
-  #buttonclose:focus {
-    outline: none;
-  }
-  
-  
-  
-  
-  /* GUIAS DO MENU */
-  
-
-
-
-
-  .menu p {
-    font-family: 'DejaVu Sans Light', sans-serif; /* Aplicar a fonte 'Adelaide-Regular' aos elementos <p> */
-    font-weight: 100; /* Defina o peso da fonte como thin (leve) */
-    margin: 0; /* Remover margens padrão dos parágrafos */
-  }
-  
-  .menu a {
-    font-family: 'DejaVu Sans Light', sans-serif;
-    font-weight: 100;
-    font-size: 100px; /* Aumente o tamanho da fonte para 50px */
-    text-decoration: none;
-    color: #333;
-  }
-  
-  .menu a:hover {
-    text-decoration: underline; /* Adicionar sublinhado ao passar o mouse */
-  }
-  
-  
-  /* Adicionar espaçamento entre as palavras */
-  .menu-items-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%; /* Ocupar toda a altura do menu */
-    word-spacing: 10px; /* Adicionar espaçamento entre as palavras */
-  }
-  
-  
-  /* Estilizar a <div class="guias"> */
-  .guias {
-    display: flex;
-    flex-direction: row; /* Altera a direção para uma linha */
-    align-items: flex-start; /* Alinha as palavras ao topo */
-    height: 100%;
-    padding-left: 80px;
-    margin-top: 5px;
-  }
-  
-  .guias a {
-    font-family: 'DejaVu Sans Light', sans-serif;
-    font-weight: 100;
-    font-size: 25px;
-    color: #333;
-    margin: 0;
-    white-space: nowrap;
-    padding: 350px 15px; /* Ajusta o espaçamento acima e abaixo */
-    transition: transform 0.3s ease-in-out;
-  }
-  
-  .guias a:hover {
-    transform: perspective(800px) rotateY(40deg);
-    color: gold; /* Muda a cor do texto para dourado */
-  }
-  
-  
-  /* DUVIDAS */ 
-  
-  /* Estilos para o botão "Voltar ao Início" */
-  #voltarInicio {
-    padding: 10px 20px;
-    font-size: 16px;
-    background-color: #333;
     color: #ffffff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  #voltarInicio:hover {
-
-    background-color: #333;
-
-  }
-
-  .direita {
-    background-color: rgb(91, 91, 91);
-    width: 16%;
-    height: 100vh;
-    right: 10%;
+    font-family:'Leelawadee UI Semilight';
+    right: 2.5%;
     position: absolute;
-    top: 0;
-    opacity: 0; /* Inicia com opacidade 0 para não ser visível */
-    transition: opacity 3s ease; /* Adapte a duração conforme necessário */
+    top: -600px; /* Inicia o menu fora do campo visual */
+    z-index: 2;
+    transition: top 1s ease; /* Adiciona uma transição suave para a propriedade 'top' */
+
+}
+
+h1{
     display: none;
 }
 
-  @media only screen and (min-width: 401px) and (max-width:600px) {
+.item {
 
-
-    #btnInicio {
-
-      right: 20px;
-      top: 10px;
-      display: block;
-      position: absolute;
-      padding: 6px 20px;
-  }
-
-
-    #menuButton {
-      background-color: #000000;
-      color: white;
-      border: none;
-      padding: 7px 10px;
-      font-size: 16px;
-      cursor: pointer;
-      display: block;
-    }
-    
-    #menuContainer {
-      display: none;
-      position: fixed;
-      top: 0;
-      right: 0;
-      height: 100%;
-      width: 70%;
-      max-width: 600px;
-      background-color: #333;
-      padding: 20px;
-      box-sizing: border-box;
-      position: absolute;
-    }
-    
-    #menuContainer .bloco {
-
-      display: flex;
-      flex-direction: column;
-
-    }
-    
-    #menuContainer .item {
-
-      background-color: #000000;
-      padding: 10px;
-      margin-bottom: 20px;
-      border-radius: 10px;
-      display: flex;
-      width: 100px;
-      height: 50px;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      position: absolute;
-      top: 50%;
-      margin-left: 22%;
-    }
-    
-    #menuContainer .item h2 {
-      margin: 0;
-      color: white;
-      font-size: 18px;
+    padding: 10px;
+    margin-bottom: 80px;
+    border-radius: 0px;
+    display: flex;
+    width: 200px;
+    height: 80px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    background-color: transparent;
+    border: 1px solid rgb(255, 255, 255);
+    transition: background-color 0.1s;
+    transition: color 0.1s; /* Adicione esta linha para controlar a transição */
     }
 
-   
-    
-    #menuContainer .redirecionavel {
-      cursor: pointer;
+    .item:hover {
+        background-color: white; /* Muda o fundo para branco quando o mouse está sobre o elemento */
     }
-    
-    
-    .buttonstart {
 
-      margin-right: 7%;
-      margin-top: 20px;
-      color: black;
+    .menu h2:hover {
+        color: rgb(0, 0, 0);  
+    }
+
+
+.menu h2 {
+
+    font-family: 'Corbel Light';
+    font-size: 30px;
+    font-weight: 1px;
+    color: rgb(255, 255, 255);  
+
+}
+
+
+.perfeito {
+    position: fixed;
+    color: #333;
+    margin-left: 100px;
+    top: -500px; /* Inicia o elemento fora do campo visual */
+    transition: top 1s ease; /* Adiciona uma transição suave para a propriedade 'top' */
+}
   
- 
+  .container.hidden {
+    display: none; /* Esconde o elemento com a classe 'container'. */
+  }
 
+  .container {
+    display: block;
+  }
+
+  .botoes {
+    text-align: right;
+    position: fixed;
+    top: -500px; /* Inicia os botões fora do campo visual */
+    margin-left: 96px;
+    transition: top 1s ease; /* Adiciona uma transição suave para a propriedade 'top' */
+}
+  
+  
+  /* Estilização para os botões dentro da classe "botoes" */
+  .botoes button {
+    font-family: "Segoe UI Black"; /* Use a fonte personalizada com alternativa genérica */
+    background-color: #d8c200;
+    color: #333333da; /* Cor do texto branca */
+    border: none;
+    cursor: pointer;
+    padding: 8px 20px;
+    display: block; /* Faz com que os botões ocupem toda a largura disponível */
+    transform: translateY(-5px); /* Move o botão para cima ao passar o mouse */
+    box-shadow: 0px 5px 10px #00000094; /* Adiciona uma sombra */
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s; /* Adiciona transições suaves */
+    z-index:0;
+    /* Efeito 3D */
+    perspective: 1000px; /* Define a perspectiva para criar o efeito 3D */
+  }
+  
+  
+  .botoes button:hover {
+    transform: translateY(-10px) translateZ(10px); /* Move o botão para cima e para frente */
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3); /* Adiciona uma sombra mais pronunciada */
+  }
+  
+
+  
+@font-face {
+    font-family: 'GeosansLight'; /* Dê um nome à sua fonte */
+    src: url('/entre/oceano/afundo/fonts/GeosansLight.ttf') format('woff2'),
+         url('/entre/oceano/afundo/fonts/GeosansLight.ttf') format('woff');
+    /* Inclua todos os formatos que você tem disponíveis */
+  }
+  
+  h5 {
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 50px;
+    margin-top: 350px;
+    margin-bottom: 40px;
+
+  }
+  
+  h3{
+    display: none;
+  }
+  
+  p {
+  
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 22px;
+    font-weight: 10px;
+
+  }
+
+  /* Estilizando a barra de rolagem */
+::-webkit-scrollbar {
+    width: 12px; /* Largura da barra de rolagem no Chrome/Safari */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #3498db; /* Cor do "polegar" da barra de rolagem */
+}
+
+::-webkit-scrollbar-track {
+    background-color: #f1f1f1; /* Cor da "trilha" da barra de rolagem */
+}
+
+
+
+
+  @media only screen and (max-width: 1440px) {
+    .direita {
+        width: 9%;
+        height: 100vh;
+        display: none;
+    }
+
+    .menu h2{
+
+        font-size: 25px;
+
+    }
+
+    h5{
+
+        font-size: 60px;
+        margin-top: 200px
+    }
+
+    .item{
+        height: 80px;
+        width: 150px;
+        margin-bottom: 50px;
+       
+    }
+
+    .menu{
+
+        right: 7%;
+
+    }
+    
+    .nokia{
+        display: none;
     }
 
     
-    .meio {
-      margin-left: 25%;
+}
+
+
+@media only screen and (min-width: 1280px) and (max-width: 1440px) {
+
+    /* Estilos específicos para Laptop 3 com resolução 1280x950 */
+
+    .direita {
+        display: none;
+
+    }
+
+    h5{
+
+        margin-top: 150px;
+        font-size: 52px;
+
+
+    }
+
+    .menu{
+
+        right: 5%;
+
+    }
+
+    .nokia{
+        display: none;
+    }
+
+}
+
+
+
+
+@media only screen and (max-width: 600px) {
+
+    .direita {
+        display: none;
+        width: 100%;
+        right: 0;
+        background-color: black;
+    }
+
+
+    .direita.visivel {
+        text-align: right;
+    }
+
+    .menu {
+        display: none;
+        position: absolute;
+        margin-top: 120px;
+        left: 7%;
+        z-index: 1;
+    }
+    .menu h2{
+        font-size: 20px;
+    }
+
+    .item{
+        width: 120px;
+        height: 40px;
+        background-color:transparent;
+        border: 1px solid white;
+        border-radius: 0px;
+
+    }
+
+    .menu.aberto {
+        display: block;
+    }
+
+
+
+    #botaoMenu {
+        display: none; /* Inicia oculto */
+        background-color: #333;
+        color: #ffffff;
+        padding: 10px;
+        cursor: pointer;
+        right: 20px;
+        border: none;
+        top: 20px;
+        position: absolute;
+        transform: translateY(-5px);
+        box-shadow: 0px 5px 10px #00000094;
+        transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+        perspective: 1000px;
+    }
+
+    .botoesMenu button:hover {
+        transform: translateY(-10px) translateZ(10px);
+        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+    }
+
+    .botoes{
+        margin-left:22%;
+
+    }
+    .botoes button {
+        background-color: #333;
+        color: #ffffff;
+        padding: 12px 40px;
+    }
+    .nokia{
+        display: block;
+        transition: top 1s ease; /* Adiciona uma transição suave para a propriedade 'top' */
+    }
+
+    /* Ocultar o botão quando o menu está aberto */
+    .menu.aberto #botaoMenu {
+        display: none;
+    }
+
+    h5 {
+
+        font-size: 27px;
+        display: block;
+    }
     
+
+    .perfeito{
+        margin-left: 18%;
     }
 
+    p{
+        font-size: 18px;
+        margin-bottom: 10px;
+        display: none;
+    }
+
+    .logo img{
+
+        width: 300px;
+        height: 200px;
+    }
+
+    h4{
+        font-family: 'Nunito Sans', sans-serif;
+        font-size: 27px;
+        margin-top: 200px;
+        display: block;
+        text-align: center;
+        white-space: nowrap; /* Impede quebras de linha */
+    }
+
+    h3{
+        font-size: 20px;
+        margin-bottom: 10px;
+        font-family: 'Nunito Sans', sans-serif;
+        text-align: center;
+        display: block;
+
+    }
+
+       
+   #a {
+       background-color: rgb(53, 53, 53);
+       height: 50vh;
+       top: 0;
+       position: relative;
+   }
+   
+   #b {
+   
+       background-color: rgb(53, 53, 53);
+       height: 50vh;
+       position: relative;
+       bottom: 0;
+   }
+   
+   .loader {
+   
+       position: absolute;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       top: 50%;
+       left: 34%;
+   }
+   
+   .loader div {
+       background: rgb(255, 255, 255);
+       border-radius: 50%;
+       width: 25px;
+       height: 25px;
+       z-index: 1;
+       animation: anim 2s infinite linear;
+       animation-delay: calc(-0.3s * var(--i));
+       transform: translateY(5px);
+       margin: 0.2em;
+   }
+
+    .bloco {
+
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+   }
+
+        /* Estilos específicos para o botão quando o menu está aberto */
+    #botaoMenu.fecharMenu {
+        
+        background-color: transparent;
+        border: 1px solid white;
+        width: 130px; 
+
+
+    }
+
+}
+
+
+@media only screen and (max-width: 500px) {
+    .botoes{
+        margin-left:15%;
+        
+
+    }
+
+    .aviso{
+
+        display:block;
+        font-size:20px;
+        top:0;
+        left:50%;
+            
+        }
+
+
+    .botoes button{
+
+        padding: 8px 20px;
+    }
+
+        h4{
+        font-family: 'Nunito Sans', sans-serif;
+        font-size: 27px;
+        margin-top: 200px;
+        display: block;
+        text-align: center;
+        margin-left: 50%;
+        white-space: nowrap; /* Impede quebras de linha */
+    }
+
+    h3{
+        font-size: 20px;
+        margin-bottom: 10px;
+        font-family: 'Nunito Sans', sans-serif;
+        text-align: center;
+        display: block;
+    }
+
+    .menu {
+        display: none;
+        position: absolute;
+        margin-top: 120px;
+        left: 7%;
+        z-index: 1;
+    }
+
+    .menu h2{
+        font-size: 20px;
+    }
+
+    .bloco {
+
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+   }
     
-    .opcao-container p {
-
-      display: none;
-
-    }
-
-    .opcao-container h3 {
-
-      font-size: 15px;
-      margin-bottom: 25px;
+    .item{
+        width: 120px;
+        height: 40px;
+        background-color:transparent;
+        border: 1px solid white;
+        border-radius: 0px;
 
     }
 
-    
-    .objeto h1 {
+    .logo img{
 
-      font-size: 20px;
-      margin-top: 5px;
+        width: 200px;
+        height: 150px;
+    }
+        /* Estilos específicos para o botão quando o menu está aberto */
+    #botaoMenu.fecharMenu {
+        
+        background-color: transparent;
+        border: 1px solid white;
+        width: 130px; 
+
 
     }
 
-    .objeto h2 {
 
-      font-size: 15px;
-      
+}
+
+
+@media only screen and (max-width: 420px) {
+
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        overflow: hidden;
     }
-    
+
+    html, body{
+        background: rgba(17, 17, 17, 0.78);
+        width: 100%;
+        height: 100vh;
+    }
+
     .botoes{
 
-      left: 10%;
-      top: 50%;
+        margin-left:20%
 
     }
 
-    .botoes button {
+    .bloco {
 
-      padding: 5px 15px;
-      font-size: 10px;
-      margin-bottom: 29px;
+    text-align: left;
+    justify-content: left;
+    align-items: left;
+
+}
+
+
+    .botoes button{
+
+        padding: 8px 20px;
+        z-index:0;
+    }
+
+    h4 {
+
+        font-family: 'Nunito Sans', sans-serif;
+        font-size: 27px;
+        margin-top: 200px;
+        display: none;
+        text-align: center;
+        white-space: nowrap; /* Impede quebras de linha */
+        color: #ffffff;
 
     }
 
-    .closertitle {
+    h3 {
 
-      display: none;
+        font-size: 20px;
+        margin-bottom: 10px;
+        font-family: 'Nunito Sans', sans-serif;
+        text-align: center;
+        display: none;
+        color: #ffffff;
+    }
+
+    .menu {
+        display: none;
+        position: absolute;
+        margin-top: 120px;
+        left: 7%;
+        z-index: 1;
+        color: #333;
+    }
+
+     h1{
+        color: #ffffff;
+        font-size: 35px;
+        margin-left: 10px;
+        margin-top: 400px;
+        z-index: 3;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        display: block;
+     }
+
+    .menu h2{
+        font-size: 24px;
+    }
+
+    .item{
+        width: 120px;
+        height: 40px;
+        background-color:transparent;
+        border: none;
+        border-radius: 0px;
+        left: -100px;
+        justify-content: left;
+        text-align: left;
+
 
     }
 
-
-
-
-  }
-
-
-
-  @media only screen and (min-width: 300px) and (max-width:400px) {
-
-
-    #btnInicio {
-
-      right: 20px;
-      top: 10px;
-      display: block;
-      position: absolute;
-      padding: 6px 20px;
-  }
-
-    #menuButton {
-      background-color: #000000;
-      color: white;
-      border: none;
-      padding: 7px 10px;
-      font-size: 14px;
-      cursor: pointer;
-      display: block;
-    }
-    
-    #menuContainer {
-      display: none;
-      position: fixed;
-      top: 0;
-      right: 0;
-      height: 100%;
-      width: 70%;
-      max-width: 600px;
-      background-color: #333;
-      padding: 20px;
-      box-sizing: border-box;
-    }
-    
-    #menuContainer .bloco {
-      display: flex;
-      flex-direction: column;
-    }
-    
-    #menuContainer .item {
-
-      background-color: #000000;
-      padding: 10px;
-      margin-bottom: 20px;
-      border-radius: 10px;
-      display: flex;
-      width: 100px;
-      height: 50px;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      position: absolute;
-      top: 50%;
-      margin-left: 22%;
-    }
-    
-    #menuContainer .item h2 {
-      margin: 0;
-      color: white;
-      font-size: 18px;
-    }
-    
-    #menuContainer .redirecionavel {
-      cursor: pointer;
-    }
-    
-    
-    .buttonstart {
-
-      margin-right: 7%;
-      margin-top: 20px;
-      color: black;
+        /* Estilos específicos para o botão quando o menu está aberto */
+    #botaoMenu{
+        
+        background-color: transparent;
+        color: #ffffff;
+        border: 2px solid rgb(255, 255, 255);
+        font-family: Graphik, sans-serif;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 1.3;
+        letter-spacing: -0.01px;
+        border-radius: 30px;
+        width: 98px; 
+        right: 15px;
+        top: 40px;
+        font-size: 14px;      
 
     }
 
-    .meio {
-      margin-left: 14%;
-    
-    }
+    #botaoMenu.fecharMenu {
+        
+        background-color: transparent;
+        border: 1px solid rgb(255, 255, 255);
+        width: 100px; 
 
-    
-    .opcao-container p {
-
-      display: none;
 
     }
 
-    .opcao-container h3 {
+    .menu {
 
-      font-size: 15px;
-      margin-bottom: 25px;
-
+        color: #ffffff;
+        font-family:'Leelawadee UI Semilight';
+        right: 2.5%;
+        position: absolute;
+        top: -600px; /* Inicia o menu fora do campo visual */
+        z-index: 2;
+        margin-top: -80px;
     }
 
     
-    .objeto h1 {
+.direita {
+    background: rgba(17, 17, 17, 0.78);
+    opacity: 0.1;
+}
 
-      font-size: 20px;
-      margin-top: 5px;
+        .logo img{
+
+        left: 24%;
+        position: absolute;
+        opacity: 1;
+        display: block;
+        z-index: 0;
+        top: 25%;
+        height: 200px;
+        width: 200px;
+    }
+
+    #fun{
+        position: absolute;
+        top: 32%;
+        opacity: 1;
+        z-index: 1;
+    }
+
+    .perfeito{
+        margin-left: 0%;
+        display: block;
+        width: 100%;
+        height: 100vh;
+    }
+
+    h4{
+        margin-left: 0%;
 
     }
 
-    .objeto h2 {
+    h3{
+        margin-left: 0%;
 
-      font-size: 15px;
-      
     }
-    
+    h5{
+        display: none;
+    }
+
     .botoes{
+      
 
-      left: 10%;
-      top: 50%;
-
-
+        margin-left:2%;
+        position: absolute;
+        margin-top: 10%;
+        height:  40vh;
+        align-items: center;
+        justify-content: center;
+        
     }
 
-    .botoes button {
+    #botaoEndereco {
 
-      padding: 5px 15px;
-      font-size: 10px;
-      margin-bottom: 29px;
-
+        display: flex;
+        -webkit-box-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        justify-content: center;
+        outline: transparent solid 2px;
+        outline-offset: 2px;
+        cursor: pointer;
+        background-color: transparent;
+        border-color: rgb(255, 255, 255);
+        border-width: 0px;
+        border-style: none;
+        border-radius: 64px;
+        padding: 30px 15px;
+        box-shadow: rgb(255, 255, 255) 0px 0px 0px 0px;
+        font-family: Graphik, sans-serif;
+        font-weight:600;
+        font-size: 15px;
+        letter-spacing: -0.01px;
+        color:rgb(204, 0, 0);
+        min-width: 48px;
+        width: 100%;
+        height: 50px;
+        position: relative;
+        overflow: hidden;
+        border-radius: 30px;        
+        margin-top: 14%;
+        height:  6vh;
+        border: 2px solid rgb(204, 0, 0);
     }
 
-    .closertitle {
-
-      display: none;
-
+    #nome{
+        display: block;
+        top: 80%;
+        left: 13px;
+        position: absolute;
+        color: rgb(215, 215, 215);
+        font-size: 19px;
     }
 
-  }
+    #a {
+        background-color: rgb(53, 53, 53);
+        height: 50vh;
+        top: 0;
+        position: relative;
+        display: none;
+    }
+    
+    #b {
+        background-color: rgb(53, 53, 53);
+        height: 50vh;
+        position: relative;
+        bottom: 0;
+        display: none;
+    }
+    
+    .loader {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: 50%;
+        left: 45%;
+        display: none;
+        
+    }
+}
