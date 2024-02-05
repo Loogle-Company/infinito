@@ -27,6 +27,11 @@ h1 {
 
 h2 {
     font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+p{
+    text-decoration: none; /* Remove sublinhado apenas do título */
 }
 
 /* Estilo do meio da página */
@@ -44,6 +49,9 @@ button {
     cursor: pointer;
     font-size: 1em;
     border-radius: 5px;
+    right: 15px;
+    position: absolute;
+    top: 167px;
 }
 
 /* Estilo dos botões quando hover */
@@ -51,24 +59,34 @@ button:hover {
     background-color: #2980b9;
 }
 
-/* Estilo das opções */
 .opcao-container {
+    cursor: pointer;
     border: 1px solid #bdc3c7;
     border-radius: 5px;
     margin-bottom: 10px;
     padding: 10px;
-    cursor: pointer;
+    transition: background-color 0.3s ease; /* Adiciona transição suave na mudança de cor */
+    text-decoration: none; /* Remove sublinhado dos links */
+    color: #333; /* Cor do texto para os links */
+    
 }
 
 h3 {
     font-size: 1.2em;
     margin-bottom: 5px;
+    text-decoration: none; /* Remove sublinhado apenas do título */
+
+}
+
+a{
+    text-decoration: none; /* Remove sublinhado apenas do título */
 }
 
 /* Estilo dos links importantes */
 .opcao-container:last-child {
     background-color: #bdc3c7;
     color: #000000;
+    text-decoration: none; /* Remove sublinhado dos links */
 }
 
 /* Estilo do rodapé */
